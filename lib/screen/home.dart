@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
   _HomeState createState() => _HomeState();
@@ -11,17 +11,18 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        Center(
+        padding: const EdgeInsets.all(2.0),
+        child: Center(
           child: Column(
             children: [
-              Image.asset("assets/images/product2"),
-              Text(
+              Image.asset("assets/images/product2.jpg"),
+              const Text(
                 "Calculator",
                 style: TextStyle(
                   fontFamily: 'SFProText-Regular',
                 ),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(
                   labelText: "Apple Amount",
                   border: OutlineInputBorder(),
@@ -29,7 +30,7 @@ class _HomeState extends State<Home> {
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text("Calculate"),
+                child: const Text("Calculate"),
               ),
             ],
           ),
